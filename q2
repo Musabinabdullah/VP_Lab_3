@@ -1,24 +1,20 @@
 using System;
 
-namespace CommandLineApp
+class Program
 {
-    class Program
+    static int Square(int num)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Command-line arguments:");
+        return num * num;
+    }
 
-            if (args.Length == 0)
-            {
-                Console.WriteLine("No arguments were provided.");
-            }
-            else
-            {
-                for (int i = 0; i < args.Length; i++)
-                {
-                    Console.WriteLine($"Argument {i + 1}: {args[i]}");
-                }
-            }
+    static void Main()
+    {
+        Console.WriteLine("Squares of the first 10 num:\n");
+
+        for (int i=1;i<=10;i++)
+        {
+            int square = Square(i);
+            Console.WriteLine($"The square of {i} is {square}");
         }
     }
 }
